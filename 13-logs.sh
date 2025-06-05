@@ -4,7 +4,7 @@ USERID=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-N="\e[0m]"
+N="\e[0m"
 
 LOGS_FOLDER="/var/log/shellscript-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
@@ -38,7 +38,7 @@ then
     dnf install mysql -y &>>$LOG_FILE_NAME
     VALIDATE $? "Installing MySQL"
 else
-    echo -e "MySQL is already $Y installed$N"
+    echo -e "MySQL is already $Y installed $N"
 fi
 
 
