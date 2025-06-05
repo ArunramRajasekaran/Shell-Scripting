@@ -45,7 +45,7 @@ dnf installed git -y &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 then  
-    echo -e "Installing Git... $R Failure"
+    echo -e "$Y Git not installed"
     dnf install git -y &>>$LOG_FILE_NAME
     VALIDATE $? "Installing Git"
 else
