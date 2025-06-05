@@ -34,7 +34,7 @@ dnf list installed mysql &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ] #not installed
 then
-    echo -e "$Y MySQL not installed"
+    echo -e "$Y MySQL not installed $N"
     dnf install mysql -y &>>$LOG_FILE_NAME
     VALIDATE $? "Installing MySQL"
 else
@@ -47,7 +47,7 @@ dnf installed git -y &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ]
 then  
-    echo -e "$Y Git not installed"
+    echo -e "$Y Git not installed $N"
     dnf install git -y &>>$LOG_FILE_NAME
     VALIDATE $? "Installing Git"
 else
