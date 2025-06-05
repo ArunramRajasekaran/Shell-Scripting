@@ -1,0 +1,4 @@
+Script started executing at; 
+13-logs.sh: line 30: dnf: command not found
+13-logs.sh: line 43: dnf: command not found
+13-logs.sh: line 48: dnf: command not found
